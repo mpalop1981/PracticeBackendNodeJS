@@ -1,1 +1,1 @@
-module.exports = Articulo;
+//module.exports = Articulo;
