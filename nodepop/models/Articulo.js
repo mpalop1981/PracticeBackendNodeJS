@@ -3,14 +3,24 @@
 const mongoose = require('mongoose');
 
 const articuloSchema = mongoose.Schema({
-    name:{type: String, index:true},
-    sell:{type: Boolean, index:true},
-    price:{type: Number, index:true},
-    image:{type: String, index:true},
+    name: String,
+    sell: Boolean,
+    price: Number,
+    image: String,
     tags: [String],
 }, {
 
 });
+
+articuloSchema.statics.lista = function(filters, skip, limit, select, sort){
+    console.log(filters);
+    const query = Articulo.find(filters);
+    query.skip(skip);
+    query.limit(limit);
+    query.select(select);
+    query.sort(sort);
+    return query.exec();
+}
 
 const Articulo = mongoose.model('Articulo', articuloSchema);
 

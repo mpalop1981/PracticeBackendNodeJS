@@ -1,16 +1,23 @@
 [
     {
-        "name": "Tablet",
+        "name": "tablet",
         "sell": true,
         "price": 300,
-        "image": "C://images/001.jpg",
+        "image": "001.jpg",
         "tags": ["work", "lifestyle"]
     },
     {
-        "name": "Car Seat 600",
+        "name": "carSeat600",
         "sell": true,
         "price": 1000,
-        "image": "C://images/002.jpg",
+        "image": "002.jpg",
         "tags": ["motor", "mobile"]
+    },
+    {
+        "name": "harleyDavinson",
+        "sell": false,
+        "price": 3000,
+        "image": "003.jpg",
+        "tags": ["motor", "mobile", "lifestyle"]
     }
   ]
