@@ -52,7 +52,7 @@ async function main() {
     const data = await fsPromise.readFile('initDB.articulos.json', 'utf-8');
     const articuloData = JSON.parse(data);
   
-    // crear agentes iniciales
+    // crear articulos iniciales
     const articulos = await Articulo.insertMany(articuloData);
     console.log(`Creados ${articulos.length} articulos.`);
   }
