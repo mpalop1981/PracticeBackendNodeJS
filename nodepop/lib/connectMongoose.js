@@ -11,7 +11,7 @@ mongoose.connection.once('open', () => {
   console.log('Conectado a MongoDB en la BD:', mongoose.connection.name);
 });
 
-mongoose.connect('mongodb://localhost/articulosBD');
+mongoose.connect(process.env.CONNECTIONDB_STRING);
 
 // opcional
 module.exports = mongoose.connection;

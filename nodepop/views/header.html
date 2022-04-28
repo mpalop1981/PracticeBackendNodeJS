@@ -1,0 +1,6 @@
+<h1><%= title %></h1>
+<p><%= __('Welcome to')%> <%= title %></p>
+<div>
+  <% getLocales().forEach(locale => { %>
+  <a href="/change-locale/<%= locale %>"><%= locale %></a>&nbsp; <% }) %>
+</div>
