@@ -22,15 +22,20 @@ npm run initdb
 
 * ATENCION * Esto borrará todos los datos de la BD y cargará el estado inicial.
 
-* ATENCION * (en otra terminal), para iniciar el microservicio que crea las imagenes en miniatura (thumnail).
+## Inicializar Servicio para crear thumbnail
+
+* ATENCION * (en otra terminal)
 
 ```sh
 npm run thumbservice
 ```
 
+## Pantalla principal
 
-http://localhost:3000 pantalla principal donde ver los anuncio, thumbnail y la Internacionalización.
+http://localhost:3000  donde ver los anuncio, thumbnail y la Internacionalización.
 
+
+## API/endpoints
 
 El API se accede en /api
 Para utilizar los endpoints de la api requiere JWT. Puede conseguir un JWT haciendo la peticion http://localhost:3000/api/login con {email: user@example.com, password: 1234}.
