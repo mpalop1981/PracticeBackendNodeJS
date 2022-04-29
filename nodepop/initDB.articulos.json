@@ -1,23 +1,26 @@
 [
-    {
-        "name": "tablet",
-        "sell": true,
-        "price": 300,
-        "image": "001.jpg",
-        "tags": ["work", "lifestyle"]
-    },
-    {
-        "name": "carSeat600",
-        "sell": true,
-        "price": 1000,
-        "image": "002.jpg",
-        "tags": ["motor", "mobile"]
-    },
-    {
-        "name": "harleyDavinson",
-        "sell": false,
-        "price": 3000,
-        "image": "003.jpg",
-        "tags": ["motor", "mobile", "lifestyle"]
-    }
-  ]
+  {
+    "name": "tablet",
+    "sell": true,
+    "price": 300,
+    "image": "./images/001.jpg",
+    "thumbnail": "./images/001_thumbnail.jpeg",
+    "tags": ["work", "lifestyle"]
+  },
+  {
+    "name": "carSeat600",
+    "sell": true,
+    "price": 1000,
+    "image": "./images/002.jpg",
+    "thumbnail": "./images/002_thumbnail.jpeg",
+    "tags": ["motor", "mobile"]
+  },
+  {
+    "name": "harleyDavinson",
+    "sell": false,
+    "price": 3000,
+    "image": "./images/003.jpg",
+    "thumbnail": "./images/003_thumbnail.jpeg",
+    "tags": ["motor", "mobile", "lifestyle"]
+  }
+]

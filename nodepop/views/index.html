@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <% include header.html %>
-
-  <body id="page-top">
+  <body>
     <h2><%= __("Adverts List") %></h2>
     <%if (results) {%>
     <table>
@@ -19,7 +18,9 @@
           <td><%= producto.name %></td>
           <td><%= producto.sell%></td>
           <td><%= producto.price%></td>
-          <td><%= producto.image%></td>
+          <td>
+            <img src=<%=producto.thumbnail %> alt=<%= producto.name %>>
+          </td>
           <td><%= producto.tags%></td>
         </tr>
         <% }) %>

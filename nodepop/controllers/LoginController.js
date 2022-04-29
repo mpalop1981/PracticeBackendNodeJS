@@ -18,7 +18,7 @@ class LoginController {
         return;
       }
 
-      // generamos un JWT con su _id
+      // generamos un JWT
       jwt.sign(
         { _id: usuario._id },
         process.env.JWT_SECRET,
@@ -30,7 +30,7 @@ class LoginController {
             next(err);
             return;
           }
-          // devolver al cliente es token generado
+          // delvovemos el token generado
           res.json({ token: jwtToken });
         },
       );

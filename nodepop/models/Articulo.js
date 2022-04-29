@@ -8,6 +8,7 @@ const articuloSchema = mongoose.Schema(
     sell: Boolean,
     price: Number,
     image: String,
+    thumbnail: String,
     tags: [String],
   },
   {},

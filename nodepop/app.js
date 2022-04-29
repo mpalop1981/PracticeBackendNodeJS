@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Setup de i18n
 app.use(i18n.init);
 
-app.use('/api/articulos', jwtAuth, articulosRouter);
+app.use('/api/articulos',jwtAuth , articulosRouter);
 app.post('/api/authenticate', loginController.postJWT);
 
 app.use('/', indexRouter);

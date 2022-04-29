@@ -2,6 +2,10 @@
 
 const express = require('express');
 const createError = require('http-errors');
+
+const { Requester } = require("cote");
+const requester = new Requester({ name: "requesterThumbnail" });
+
 const Articulo = require('../../models/Articulo');
 
 const router = express.Router();
@@ -15,10 +19,10 @@ const storage = multer.diskStorage({
     cb(null, './public/images');
   },
   filename: (req, file, cb) => {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+    const randomStr = Date.now() + '-' + Math.round(Math.random() * 1e9);
     cb(
       null,
-      file.fieldname + '-' + uniqueSuffix + '.' + file.mimetype.split('/')[1],
+      file.fieldname + '-' + randomStr + '.' + file.mimetype.split('/')[1],
     );
   },
 });
@@ -72,7 +76,15 @@ router.post('/', upload.single('image'), async (req, res, next) => {
   try {
     const articuloData = req.body;
     articuloData.image = '.' + req.file.path.split('public')[1];
-    console.log(articuloData.image);
+  
+    const event = {
+      type: "crear-thumbnail",
+      imagePath: articuloData.image,
+    };
+    const thumbnail = await new Promise((resolve) =>
+      requester.send(event, resolve)
+    );
+    articuloData.thumbnail = thumbnail;
 
     const articulo = new Articulo(articuloData);
 
